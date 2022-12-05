@@ -1,5 +1,5 @@
 # Advent of Code 2022
----
+
 **SPOILER ALERT**: Answers are shown down below in the **Answers** section so please avoid that section if you're wary to that sort of thing.
 
 - I'll be doing my best to keep up with the daily challenges, but I may fall behind by a day or two depending on how busy the holidays get.
