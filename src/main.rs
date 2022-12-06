@@ -14,6 +14,9 @@ mod iii;
 /// https://adventofcode.com/2022/day/4
 mod iv;
 
+/// https://adventofcode.com/2022/day/5
+mod v;
+
 fn main() {
     let threads = vec![
         thread::spawn(|| Solution::new(1, 1, i::part_one::solution("./input/i.txt"))),
@@ -24,6 +27,7 @@ fn main() {
         thread::spawn(|| Solution::new(3, 2, iii::part_two::solution("./input/iii.txt", 3))),
         thread::spawn(|| Solution::new(4, 1, iv::part_one::solution("./input/iv.txt"))),
         thread::spawn(|| Solution::new(4, 2, iv::part_two::solution("./input/iv.txt"))),
+        thread::spawn(|| Solution::new(5, 1, v::part_one::solution("./input/v.txt"))),
     ];
 
     threads.into_iter()
@@ -41,7 +45,7 @@ impl Solution {
     fn new<T: Display>(day: u8, part: u8, possible_solution: Result<T, io::Error>) -> Self {
         let solution = possible_solution
             .map(|answer| format!("{answer}"))
-            .unwrap_or_else(|_e| "ERROR".to_owned());
+            .unwrap_or_else(|e| format!("ERROR: {e}"));
 
         Solution { day, part, solution }
     }

@@ -5,6 +5,7 @@
 - I'll be doing my best to keep up with the daily challenges, but I may fall behind by a day or two depending on how busy the holidays get.
 - My solutions are biased towards readability, Rust idioms, best-case time-complexity, and minimizing allocations. Low-level tricks for optimal performance eschewed.
 - Each problem comes with its own unit test using their respective example input (as opposed to the actual input).
+- No effort is made to share utilities between problems, that includes the parts of each day.
 - If you have suggestions on how I could have done something better please open up an issue!
 
 ## Solutions
