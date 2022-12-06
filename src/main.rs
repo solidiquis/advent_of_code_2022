@@ -28,6 +28,7 @@ fn main() {
         thread::spawn(|| Solution::new(4, 1, iv::part_one::solution("./input/iv.txt"))),
         thread::spawn(|| Solution::new(4, 2, iv::part_two::solution("./input/iv.txt"))),
         thread::spawn(|| Solution::new(5, 1, v::part_one::solution("./input/v.txt"))),
+        thread::spawn(|| Solution::new(5, 2, v::part_two::solution("./input/v.txt"))),
     ];
 
     threads.into_iter()

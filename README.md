@@ -18,6 +18,7 @@
 - [Day 4, part 1](src/iv/part_one.rs)
 - [Day 4, part 2](src/iv/part_two.rs)
 - [Day 5, part 1](src/v/part_one.rs)
+- [Day 5, part 2](src/v/part_two.rs)
 
 ## Answers
 ```
@@ -30,4 +31,5 @@ Day 3, part 2 => 2668
 Day 4, part 1 => 477
 Day 4, part 2 => 830
 Day 5, part 1 => TGWSMRBPN
+Day 5, part 2 => TZLTLWRNF
 ```
