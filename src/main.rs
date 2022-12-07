@@ -17,6 +17,9 @@ mod iv;
 /// https://adventofcode.com/2022/day/5
 mod v;
 
+/// https://adventofcode.com/2022/day/6
+mod vi;
+
 fn main() {
     let threads = vec![
         thread::spawn(|| Solution::new(1, 1, i::part_one::solution("./input/i.txt"))),
@@ -29,10 +32,12 @@ fn main() {
         thread::spawn(|| Solution::new(4, 2, iv::part_two::solution("./input/iv.txt"))),
         thread::spawn(|| Solution::new(5, 1, v::part_one::solution("./input/v.txt"))),
         thread::spawn(|| Solution::new(5, 2, v::part_two::solution("./input/v.txt"))),
+        thread::spawn(|| Solution::new(6, 1, vi::part_one::solution("./input/vi.txt"))),
+        thread::spawn(|| Solution::new(6, 2, vi::part_two::solution("./input/vi.txt"))),
     ];
 
     threads.into_iter()
-        .map(|thread| thread.join().expect("Thread panicked"))
+        .map(|thread| thread.join().unwrap())
         .for_each(|solution| println!("{solution}"));
 }
 
